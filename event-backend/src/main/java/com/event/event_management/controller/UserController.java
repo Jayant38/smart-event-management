@@ -7,7 +7,7 @@ import com.event.event_management.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://smart-event.vercel.app")
 public class UserController {
 	 private final UserService userService;
 

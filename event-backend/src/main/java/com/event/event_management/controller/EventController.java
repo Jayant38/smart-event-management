@@ -13,7 +13,7 @@ import com.event.event_management.service.EventService;
 
 @RestController
 @RequestMapping("/api/events")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://smart-event.vercel.app")
 public class EventController {
 
     private final EventService eventService;

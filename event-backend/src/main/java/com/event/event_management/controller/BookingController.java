@@ -16,7 +16,7 @@ import com.event.event_management.util.ApiResponse;
 import com.event.event_management.dto.BookingResponseDTO;
 @RestController
 @RequestMapping("/api/bookings")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://smart-event.vercel.app")
 public class BookingController {
 
     private final BookingService bookingService;

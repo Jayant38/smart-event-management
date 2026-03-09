@@ -21,7 +21,7 @@ import com.event.event_management.repository.UserRepository;
 import com.event.event_management.service.EventService;
 import com.event.event_management.util.ApiResponse;
 @RestController   
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://smart-event.vercel.app")
 @RequestMapping("/api/admin")
 @PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
