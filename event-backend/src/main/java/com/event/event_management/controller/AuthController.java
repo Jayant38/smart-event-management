@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "https://smart-event.vercel.app")
+@CrossOrigin(origins = "*")
 public class AuthController {
 	private final AuthService authService;
 
