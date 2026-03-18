@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:1010/api",
+  baseURL: "https://event-backend-81vj.onrender.com/api",
 });
 
 // 🔐 Attach token to every request
@@ -22,11 +22,9 @@ api.interceptors.response.use(
   (error) => {
     if (error.response && error.response.status === 401) {
 
-      // Remove token
       localStorage.removeItem("token");
       localStorage.removeItem("role");
 
-      // Redirect to login
       window.location.href = "/";
     }
 
