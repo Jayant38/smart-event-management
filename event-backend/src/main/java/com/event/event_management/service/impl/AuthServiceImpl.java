@@ -1,6 +1,5 @@
 package com.event.event_management.service.impl;
-
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.event.event_management.security.JwtUtil;
 import com.event.event_management.dto.RegisterRequest;
@@ -10,12 +9,12 @@ import com.event.event_management.service.AuthService;
 @Service
 public class AuthServiceImpl implements AuthService {
 	private final UserRepository userRepository;
-    private final BCryptPasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;
 
     // Constructor Injection
     public AuthServiceImpl(UserRepository userRepository,
-                           BCryptPasswordEncoder passwordEncoder,
+                           PasswordEncoder passwordEncoder,
                            JwtUtil jwtUtil) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
